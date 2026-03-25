@@ -1,6 +1,8 @@
-# Claude Code 完整教程：从安装到实战（国内开发者指南）
+# Claude Code 国内使用教程 | 安装配置到实战完整指南【2026】
 
-> Claude Code 是目前最强的 AI 编程助手，没有之一。它直接运行在终端里，能理解你的整个代码库，帮你写代码、改 bug、跑测试、管理 Git。这篇文章记录了我从安装到日常使用的完整过程，希望能帮到同样想用上这个工具的国内开发者。
+> **Claude Code 国内怎么用？** 这是一篇面向国内开发者的 Claude Code 完整使用教程，涵盖安装、配置、国内网络问题解决方案、API 中转配置、日常使用技巧等。无论你是第一次接触 Claude Code，还是已经在用但被网络问题困扰，这篇指南都能帮到你。
+
+**关键词：** Claude Code 教程 / Claude Code 国内使用 / Claude Code 安装 / Claude Code 配置 / Claude Code API 中转 / Anthropic API 国内 / AI 编程助手 / Claude Code 替代方案
 
 ---
 
@@ -120,7 +122,7 @@ Claude Code 官方提供几种付费方案：
 
 ```bash
 # 编辑 ~/.zshrc
-nano ~/.zshrc
+vi ~/.zshrc
 
 # 添加这两行
 export ANTHROPIC_BASE_URL=https://api.maxrouter.ai
@@ -133,7 +135,7 @@ source ~/.zshrc
 **macOS / Linux（Bash）：**
 
 ```bash
-nano ~/.bashrc
+vi ~/.bashrc
 
 export ANTHROPIC_BASE_URL=https://api.maxrouter.ai
 export ANTHROPIC_API_KEY=sk-your-key
