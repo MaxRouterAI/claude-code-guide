@@ -229,7 +229,7 @@ Claude Code 支持在关键事件前后执行自定义脚本：
 | 工具 | 开发商 | 产品形态 | 底层模型 | 定价 |
 |------|--------|---------|---------|------|
 | **Claude Code** | Anthropic | 终端 CLI Agent | Claude Opus 4.8 / Sonnet 4 | $20-$200/月 |
-| **Codex CLI** | OpenAI | 终端 CLI Agent | GPT-5.6 Codex / GPT-5.4 | $20/月（ChatGPT Plus） |
+| **Codex CLI** | OpenAI | 终端 CLI Agent | GPT-5.6 | $20/月（ChatGPT Plus） |
 | **GitHub Copilot** | Microsoft/GitHub | IDE 插件 + Agent 模式 | GPT-5.x / Claude 混合 | $10-$39/月 |
 | **Cursor** | Cursor Inc. | AI-native IDE | 多模型可选（GPT/Claude） | 免费 + $20/月 Pro |
 | **Windsurf (Devin Desktop)** | Codeium | AI-native IDE | 自研 + 第三方模型 | 免费 + $15/月 |
@@ -345,6 +345,8 @@ Claude Code 支持在关键事件前后执行自定义脚本：
 
 [**MaxRouter**](https://www.maxrouter.ai) 是专为国内开发者打造的 **AI 开发加速平台**，通过智能路由引擎解决海外 AI 工具的访问问题。它不仅仅是一个代理——而是针对 AI 开发场景深度优化的网络层解决方案。
 
+![MaxRouter 首页](https://raw.githubusercontent.com/MaxRouterAI/claude-code-guide/main/images/maxrouter.png)
+
 ### 7.2 核心功能
 
 ```
@@ -387,7 +389,19 @@ maxrouter test
 
 配置完成后，Claude Code 的所有 API 请求自动通过 MaxRouter 的智能路由引擎，享受低延迟、高可用的连接。
 
-### 7.4 安全特性
+### 7.4 创建 API Key
+
+在 MaxRouter 控制台中，你可以轻松创建和管理 API Key，用于对接各类 AI 服务：
+
+![创建 API Key](https://raw.githubusercontent.com/MaxRouterAI/claude-code-guide/main/images/key.png)
+
+### 7.5 模型搜索与选择
+
+MaxRouter 提供丰富的模型搜索列表，支持按提供商、能力、价格等维度筛选最适合的模型：
+
+![模型搜索列表](https://raw.githubusercontent.com/MaxRouterAI/claude-code-guide/main/images/models.png)
+
+### 7.6 安全特性
 
 | 特性 | 说明 |
 |------|------|
@@ -396,7 +410,7 @@ maxrouter test
 | **独立 IP 池** | 每个用户分配独立出口 IP，降低风控风险 |
 | **SOC2 合规** | 通过第三方安全审计 |
 
-### 7.5 实时监控面板
+### 7.7 实时监控面板
 
 MaxRouter 提供 Web 控制台，可实时查看：
 
@@ -405,7 +419,7 @@ MaxRouter 提供 Web 控制台，可实时查看：
 - 🔔 异常告警（API 限流、节点故障）
 - 🗺️ 当前路由节点地图
 
-### 7.6 套餐对比
+### 7.8 套餐对比
 
 | 套餐 | 价格 | 流量 | 适用人群 |
 |------|------|------|---------|
