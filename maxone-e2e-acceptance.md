@@ -1,8 +1,8 @@
 # MaxOne End-to-End Acceptance Report
 
-Run Marker: MAXONE-E2E-20260725-100000
+Run Marker: MAXONE-E2E-20260725-000001
 
-生成时间：2026-07-25 10:00 (Asia/Shanghai) / 2026-07-25T02:00:00Z
+生成时间：2026-07-25 11:42 (Asia/Shanghai) / 2026-07-25T03:42:00Z
 
 ---
 
@@ -10,26 +10,26 @@ Run Marker: MAXONE-E2E-20260725-100000
 
 > 注：以下新闻由联网搜索工具于 2026-07-25 实时抓取，按重要性排列。
 
-### 1. OpenAI GPT-5.6 三模型家族 (Sol/Terra/Luna) 全面部署 + ChatGPT Work 上线 + 自研芯片 Jalapeño 量产
+### 1. AMD 向 Anthropic 投资 50 亿美元 + Alphabet AI 资本支出上调至 2050 亿美元
 
-- **发布日期**：2026-07-09（更新至 2026-07-24）
-- **摘要**：OpenAI 于 7 月上旬正式发布 GPT-5.6 系列，包括 Sol（旗舰）、Terra（中端）、Luna（轻量），配备 Ultra "Max reasoning" 子代理模式。ChatGPT Work 上线，可跨应用自主执行多步骤任务。Codex CLI 在 GitHub 开源。OpenAI 联合 Broadcom 推出首款自研推理加速芯片 Jalapeño，GPT-5.6 已成为 Microsoft 365 Copilot 优先模型。
-- **来源**：Reuters / ThursdAI
-- **URL**：https://www.reuters.com/technology/artificial-intelligence/
+- **发布日期**：2026-07-25
+- **摘要**：AMD 承诺向 Anthropic 提供最高 50 亿美元战略投资，与分阶段部署下一代 Instinct MI450 AI 加速器（最多 2GW 算力）绑定，计划 2027 年启动，标志着行业减少对 NVIDIA 依赖的关键转折。与此同时，Alphabet（Google）将 2026 年 AI 相关资本支出指引从 1950 亿美元上调至 2050 亿美元，Gemini 3.6 Flash 已发布，Gemini 4 正在预训练中。
+- **来源**：note.com（宮野宏樹）
+- **URL**：https://note.com/hirokimiyano/n/n41ab17b4958b
 
-### 2. Anthropic Claude Fable 5 恢复全球可用 + EU AI Act 全面生效 + 全球 AI 治理加速
+### 2. OpenAI GPT-5.6 三模型 (Sol/Terra/Luna) + ChatGPT Work 正式上线 + EU AI Act 全面生效
 
-- **发布日期**：2026-07-01 / 2026-07-09
-- **摘要**：Anthropic Fable 5 因美国出口管制暂停 19 天后于 7 月 1 日恢复全球可用，新增"最强网络安全分类器"。Claude Sonnet 5 发布，以 $2/$10 每百万 token 促销价面向代码与工作流。EU AI Act 通用 AI 提供者义务于 7 月 1 日全面生效。美国参议院 AI 安全委员会推进 Framework for AI Governance Act（含国家 AI 事件数据库）。UK 政府宣布禁止 16 岁以下使用社交媒体。
-- **来源**：ITS Tech Blog / ThursdAI / TLT
-- **URL**：https://its.tech/blog/ai-update-july-2026/
+- **发布日期**：2026-07-09 / 2026-07-01
+- **摘要**：OpenAI 发布 GPT-5.6 三模型家族 Sol/Terra/Luna，覆盖旗舰、中端、轻量场景。ChatGPT Work 作为企业级自动化 Agent 上线，可跨应用自主执行任务。GPT-Live 语音模型支持打断对话。同时，EU AI Act 通用 AI 提供者义务于 7 月 1 日全面生效，美国参议院推进 Framework for AI Governance Act。
+- **来源**：Business Insider / ITS Tech Blog / Reuters
+- **URL**：https://www.businessinsider.com/new-ai-model-announcements-openai-meta-grok-2026-7
 
-### 3. Meta Muse Spark 1.1 发布 + SpaceXAI Grok 4.5 + 2026"智能体元年"确立
+### 3. Meta Muse Spark 1.1 + xAI Grok 4.5 + SpaceX 60 亿美元收购 Cursor
 
 - **发布日期**：2026-07-09 / 2026-07-18
-- **摘要**：Meta 发布 Muse Spark 1.1（支持 1M token 上下文 agentic 模型），推出首个付费开发者 API，宣布自 9 月起量产自研 AI 芯片。SpaceXAI 发布 Grok 4.5，定位企业编码市场，价格远低于竞品。Q2 全球 AI Agent 融资达 47 亿美元，环比增长 62%。Kimi K2.7 Code 成为首个集成 GitHub Copilot 的开源模型。Reflection AI 获 63 亿美元算力承诺。
-- **来源**：TechCrunch / Skycrumbs / AIApps
-- **URL**：https://techcrunch.com/2026/07/page/2/
+- **摘要**：Meta 发布 Muse Spark 1.1（支持 1M token 上下文 agentic 模型），推出首个付费开发者 API；xAI（SpaceXAI）发布 Grok 4.5，定位企业编码市场。SpaceX 完成以 60 亿美元收购 AI 编码工具公司 Cursor。Q2 全球 AI Agent 融资达 47 亿美元，环比增长 62%。Kimi K2.7 Code 成为首个集成 GitHub Copilot 的开源模型。
+- **来源**：Skycrumbs / AIApps / ThursdAI
+- **URL**：https://skycrumbs.com/blog/ai-news-july-2026
 
 ---
 
@@ -37,16 +37,16 @@ Run Marker: MAXONE-E2E-20260725-100000
 
 | # | 来源名称 | URL |
 |---|---------|-----|
-| 1 | Reuters AI | https://www.reuters.com/technology/artificial-intelligence/ |
-| 2 | ThursdAI Releases | https://thursdai.news/releases/2026-07 |
-| 3 | ITS Tech Blog | https://its.tech/blog/ai-update-july-2026/ |
-| 4 | TechCrunch | https://techcrunch.com/2026/07/page/2/ |
+| 1 | note.com (宮野宏樹) | https://note.com/hirokimiyano/n/n41ab17b4958b |
+| 2 | Reuters AI | https://www.reuters.com/technology/artificial-intelligence/ |
+| 3 | Business Insider | https://www.businessinsider.com/new-ai-model-announcements-openai-meta-grok-2026-7 |
+| 4 | ITS Tech Blog | https://its.tech/blog/ai-update-july-2026/ |
 | 5 | Skycrumbs | https://skycrumbs.com/blog/ai-news-july-2026 |
-| 6 | AIApps | https://www.aiapps.com/blog/top-ai-news-july-breakthroughs-launches-trends/ |
-| 7 | TLT | https://www.tlt.com/insights-and-events/insight/tlts-ai-brief-july-2026 |
-| 8 | Mintz | https://www.mintz.com/insights-center/viewpoints/54941/2026-07-08-ai-washington-report-july-2026-edition |
-| 9 | Augusto Digital | https://augusto.digital/insights/blogs/monthly-llm-news-july-2026/ |
-| 10 | White House | https://www.whitehouse.gov/fact-sheets/2026/06/fact-sheet-president-donald-j-trump-signs-historic-directive-on-ai-in-the-national-security-enterprise/ |
+| 6 | ThursdAI Releases | https://thursdai.news/releases/2026-07 |
+| 7 | AIApps | https://www.aiapps.com/blog/top-ai-news-july-breakthroughs-launches-trends/ |
+| 8 | TechPolicy Press | https://techpolicy.press/trump-signs-previously-shelved-ai-executive-order |
+| 9 | PTech Partners | https://www.ptechpartners.com/2026/07/07/june-2026-ai-news-roundup-the-scary-frontier-post-pilot-scaling-and-open-source-push/ |
+| 10 | Ramp CFO AI Digest | https://ramp.com/leading-indicators/the-cfo-ai-digest-july-25 |
 
 ---
 
@@ -55,9 +55,9 @@ Run Marker: MAXONE-E2E-20260725-100000
 - 联网搜索：已执行 ✅
 - 来源验证：已确认 — 共 10 个独立来源
 - 工作区文件：已写入 ✅ — `files/maxone-e2e-acceptance.md`
-- GitHub Integration：已验证 ✅
-- Workflow：已创建并静态校验通过 ✅
-- 执行日志：等待查询
+- GitHub Integration：已通过 Workflow 验证
+- Workflow：已试跑
+- 执行日志：已查询
 
 ---
 
@@ -67,10 +67,10 @@ Run Marker: MAXONE-E2E-20260725-100000
 - Repo：claude-code-guide
 - Path：maxone-e2e-acceptance.md
 - Branch：main
-- Initial SHA：0f5f317126fc50cebdccef14006b1e53f01c70ef
+- Initial SHA：80d7a253ee400a9c0cde2de8963bde239f8ed77e
 - Final SHA：等待获取
 - Commit SHA：等待获取
 - Commit URL：等待获取
 - File URL：https://github.com/MaxRouterAI/claude-code-guide/blob/main/maxone-e2e-acceptance.md
 - GitHub 最终回读状态：等待执行
-- 总体状态：运行中
+- 总体状态：进行中
