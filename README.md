@@ -100,7 +100,7 @@ Claude Code 官方提供几种付费方案：
 
 这样不需要代理工具，不需要 Anthropic 账号，按量付费，用多少算多少。
 
-我用的是 [MaxRouter](https://www.maxrouter.ai)，一个大模型 API 路由平台，支持 Claude 全系列模型，与官方同价，按量计费。同时还支持 GPT、Gemini、DeepSeek 等 80+ 模型，一个 Key 就够了。
+我用的是 [MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)，一个大模型 API 路由平台，支持 Claude 全系列模型，与官方同价，按量计费。同时还支持 GPT、Gemini、DeepSeek 等 80+ 模型，一个 Key 就够了。
 
 ![MaxRouter 平台](./images/maxrouter.png)
 
@@ -110,7 +110,7 @@ Claude Code 官方提供几种付费方案：
 
 ### 1. 注册并获取 API Key
 
-访问 [www.maxrouter.ai](https://www.maxrouter.ai) 注册账号（注册送 ¥10 体验金，够试用一阵了）。
+访问 [www.maxrouter.ai](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 注册账号（注册送 ¥10 体验金，够试用一阵了）。
 
 登录后进入控制台 → 密钥管理 → 创建新密钥 → 复制 Key：
 
@@ -310,7 +310,7 @@ MaxRouter 上可以看到所有支持的模型和价格：
 MaxRouter 不存储对话内容和代码，请求直接转发到官方 API。
 
 **Q: 怎么看花了多少钱？**
-Claude Code 里输 `/cost`，或者登录 [MaxRouter 控制台](https://www.maxrouter.ai/console/overview) 看详细用量。
+Claude Code 里输 `/cost`，或者登录 [MaxRouter 控制台](https://www.maxrouter.ai/console/overview?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 看详细用量。
 
 **Q: 只能用 Claude 吗？**
 不是。MaxRouter 支持 GPT-5、GPT-4o、Gemini 2.5 Pro、DeepSeek 等 80+ 模型，统一 OpenAI 兼容接口。Claude Code 之外的场景（Cursor、自己的项目等）可以随意切换模型。
@@ -319,9 +319,9 @@ Claude Code 里输 `/cost`，或者登录 [MaxRouter 控制台](https://www.maxr
 
 - [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code)
 - [Anthropic 官网](https://www.anthropic.com/claude-code)
-- [MaxRouter](https://www.maxrouter.ai) — 我用的 API 平台
-- [MaxRouter 文档](https://www.maxrouter.ai/docs)
-- [MaxRouter 模型与价格](https://www.maxrouter.ai/pricing)
+- [MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) — 我用的 API 平台
+- [MaxRouter 文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)
+- [MaxRouter 模型与价格](https://www.maxrouter.ai/pricing?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)
 
 ---
 
