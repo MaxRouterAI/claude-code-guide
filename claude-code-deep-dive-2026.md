@@ -343,7 +343,7 @@ Claude Code 支持在关键事件前后执行自定义脚本：
 
 ### 7.1 什么是 MaxRouter
 
-[**MaxRouter**](https://www.maxrouter.ai) 是专为国内开发者打造的 **AI 开发加速平台**，通过智能路由引擎解决海外 AI 工具的访问问题。它不仅仅是一个代理——而是针对 AI 开发场景深度优化的网络层解决方案。
+[**MaxRouter**](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_deep_dive_2026) 是专为国内开发者打造的 **AI 开发加速平台**，通过智能路由引擎解决海外 AI 工具的访问问题。它不仅仅是一个代理——而是针对 AI 开发场景深度优化的网络层解决方案。
 
 ![MaxRouter 首页](https://raw.githubusercontent.com/MaxRouterAI/claude-code-guide/main/images/maxrouter.png)
 
@@ -428,7 +428,7 @@ MaxRouter 提供 Web 控制台，可实时查看：
 | **Team** | ¥99/月 | 500GB/月 | 小团队（5 人） |
 | **Enterprise** | 定制 | 无限 | 企业客户 |
 
-> 🌐 了解更多：[www.maxrouter.ai](https://www.maxrouter.ai)
+> 🌐 了解更多：[www.maxrouter.ai](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_deep_dive_2026)
 
 ---
 
@@ -451,6 +451,6 @@ MaxRouter 提供 Web 控制台，可实时查看：
 ---
 
 > **本文由 MaxRouter AI 团队编写**  
-> 网站：[www.maxrouter.ai](https://www.maxrouter.ai)  
+> 网站：[www.maxrouter.ai](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_deep_dive_2026)  
 > GitHub：[github.com/MaxRouterAI](https://github.com/MaxRouterAI)  
 > 更新时间：2026 年 7 月 21 日 北京时间
