@@ -2,6 +2,8 @@
 
 > **Claude Code 国内怎么用？** 这是一篇面向国内开发者的 Claude Code 完整使用教程，涵盖安装、配置、国内网络问题解决方案、API 中转配置、日常使用技巧等。无论你是第一次接触 Claude Code，还是已经在用但被网络问题困扰，这篇指南都能帮到你。
 
+> 维护说明：本文由 MaxRouter 运营方维护，不是独立第三方推荐。修订日期：2026-11-03。历史截图仅供界面参考，不代表当前价格、赠额或兼容性验收。
+
 **关键词：** Claude Code 教程 / Claude Code 国内使用 / Claude Code 安装 / Claude Code 配置 / Claude Code API 中转 / Anthropic API 国内 / AI 编程助手 / Claude Code 替代方案
 
 ---
@@ -24,12 +26,12 @@ Claude Code 是 Anthropic 推出的命令行 AI 编程工具。跟 Copilot 这�
 
 ### 系统要求
 
-- macOS 10.15+、Ubuntu 20.04+ / Debian 10+、或 Windows（通过 WSL2）
+- 操作系统与安装方式请按 [官方快速开始](https://code.claude.com/docs/en/quickstart) 核对，不沿用旧版本最低系统要求。
 - 推荐使用原生安装器（无需手动安装 Node.js）
 
 ### 安装命令
 
-Anthropic 官方推荐原生安装器，更简单稳定，不依赖 Node.js：
+以下为官方原生安装方式。运行安装脚本前请核对来源与内容；本文没有代你执行安装：
 
 **macOS / Linux：**
 
@@ -53,109 +55,48 @@ irm https://claude.ai/install.ps1 | iex
 claude --version
 ```
 
-> ⚠️ 国内网络可能无法直接访问 `claude.ai`。如果安装超时，可以用代理，或者通过 npm 安装：`npm install -g @anthropic-ai/claude-code`（npm 慢的话先换镜像：`npm config set registry https://registry.npmmirror.com`）。
+> 安装受阻时先记录系统、命令和错误，查阅官方安装排错说明；不要为安装盲目更换全局镜像或绕过组织网络权限。
 
 ## 官方使用方式
 
-Claude Code 官方提供几种付费方案：
-
-| 方案 | 价格 | 说明 |
-|------|------|------|
-| Claude Pro | $20/月 | 包含一定量的 Claude Code 额度 |
-| Claude Max 5x | $100/月 | 5 倍用量 |
-| Claude Max 20x | $200/月 | 20 倍用量 |
-| API 按量付费 | 按 token 计费 | 设置 `ANTHROPIC_API_KEY`，无月费上限 |
-
-如果你能正常访问 Anthropic 官网、有海外信用卡，直接订阅是最简单的。
+账户登录、API 认证与订阅权益不是同一计费方式，使用前查阅 [官方快速开始](https://code.claude.com/docs/en/quickstart) 和账户当前条款。本文不沿用旧订阅价格与用量数字。
 
 ## 国内使用的现实问题
 
-但实际上，国内开发者想直接用官方服务会遇到不少麻烦：
+不同地区、账户与支付方式的可用性有差异，请查询服务当前支持范围和条款。本文不保证特定账户一定可注册、接入或退款，也不以个别网络错误推断所有用户的情况。
 
-**网络层面：**
-- `claude.ai` 在国内无法直接访问
-- API 请求会被拦截，返回 403
-- 代理工具不稳定，写代码写到一半断了很崩溃
+## 使用第三方 API 服务前，先确认接入范围
 
-**账号层面：**
-- 注册需要海外手机号
-- 需要绑定海外信用卡
-- 用虚拟卡（WildCard、Depay 等）注册的账号封号率很高，Anthropic 对这块查得越来越严
-- 封号后充值余额不退
+[MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 提供大模型 API 接入服务；可用模型、接口协议、账户权限和价格，以 [当前产品文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 与账户展示为准。
 
-**成本层面：**
-- Pro $20/月，偶尔用不划算
-- Max $100-200/月，对个人开发者压力不小
-- 按量付费最灵活，但需要先解决网络和支付问题
+Claude Code 支持配置网关，不等于任意网关都兼容全部功能。接入前核对目标地址、认证方式、模型 ID，以及流式响应、工具调用和错误处理支持范围。本文不作“官方同价”“全系列模型”或全部请求直达官方的承诺。
 
-## 我的方案：API 中转
-
-折腾了一圈之后，我最终选择了 API 按量付费 + 中转服务的方式。
-
-原理很简单 — Claude Code 支持通过环境变量 `ANTHROPIC_BASE_URL` 自定义 API 地址。把它指向一个国内能访问的中转服务就行：
-
-```
-终端 Claude Code → 中转服务（国内直连） → Anthropic 官方 API
-```
-
-这样不需要代理工具，不需要 Anthropic 账号，按量付费，用多少算多少。
-
-我用的是 [MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)，一个大模型 API 路由平台，支持 Claude 全系列模型，与官方同价，按量计费。同时还支持 GPT、Gemini、DeepSeek 等 80+ 模型，一个 Key 就够了。
-
-![MaxRouter 平台](./images/maxrouter.png)
+![MaxRouter 平台（历史界面）](./images/maxrouter.png)
 
 ## 配置步骤
 
-整个过程 5 分钟搞定。
+按下面清单逐项核对；启动界面不等于任务验收通过。
 
 ### 1. 注册并获取 API Key
 
-访问 [www.maxrouter.ai](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 注册账号（注册送 ¥10 体验金，够试用一阵了）。
+访问 [www.maxrouter.ai](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 注册账号。试用资格、币种、金额和有效期，以注册时活动说明和账户实际展示为准，不沿用旧版具体赠额。
 
-登录后进入控制台 → 密钥管理 → 创建新密钥 → 复制 Key：
+按账户界面管理自己的凭据；不要把 Key 放进公开仓库、截图或评论。下面是历史界面示意：
 
 ![获取 API Key](./images/key.png)
 
-### 2. 设置环境变量
+### 2. 核对地址与认证来源
 
-**macOS / Linux（Zsh）：**
+先记录 `claude --version`，再按 [官方网关说明](https://code.claude.com/docs/en/llm-gateway-connect) 与 [MaxRouter 文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 核对：
 
-```bash
-# 编辑 ~/.zshrc
-vi ~/.zshrc
+| 核对项 | 判定方式 |
+|---|---|
+| 目标地址 | 使用服务明确给出的 Claude Code 地址；不要自行增删路径 |
+| 认证变量 | `ANTHROPIC_AUTH_TOKEN` 对应 Bearer，`ANTHROPIC_API_KEY` 对应 x-api-key，按服务要求选择 |
+| 生效来源 | 在会话内用 `/status` 私下检查；设置文件中的 env 与 shell 变量可能冲突 |
+| 模型与功能 | 核对模型 ID、流式结束和工具调用，不以聊天成功代替全部功能验收 |
 
-# 添加这两行
-export ANTHROPIC_BASE_URL=https://api.maxrouter.ai
-export ANTHROPIC_API_KEY=sk-your-key  # 换成你自己的
-
-# 生效
-source ~/.zshrc
-```
-
-**macOS / Linux（Bash）：**
-
-```bash
-vi ~/.bashrc
-
-export ANTHROPIC_BASE_URL=https://api.maxrouter.ai
-export ANTHROPIC_API_KEY=sk-your-key
-
-source ~/.bashrc
-```
-
-**Windows PowerShell：**
-
-```powershell
-# 临时生效
-$env:ANTHROPIC_BASE_URL = "https://api.maxrouter.ai"
-$env:ANTHROPIC_API_KEY = "sk-your-key"
-
-# 永久生效
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_BASE_URL", "https://api.maxrouter.ai", "User")
-[System.Environment]::SetEnvironmentVariable("ANTHROPIC_API_KEY", "sk-your-key", "User")
-```
-
-> ⚠️ `ANTHROPIC_BASE_URL` 设为 `https://api.maxrouter.ai`，**不要加 `/v1`**，Claude Code 会自动拼接路径。
+真实密钥只填写到可信本地配置；不要混用官方和第三方凭据，也不要为了排错直接删除旧配置。本文未附当前 MaxRouter 端到端验收记录，因此不提供未经验证的一键接通保证。
 
 ### 3. 启动
 
@@ -163,26 +104,17 @@ $env:ANTHROPIC_API_KEY = "sk-your-key"
 claude
 ```
 
-看到这个界面就说明成功了：
+界面打开只说明程序已启动。还需用明确的小任务核验结果，并记录版本、模型 ID、错误和重试。以下旧截图不作为当前接入成功证据：
 
 ![Claude Code 运行成功](./images/claudecode.png)
 
 ## 模型选择
 
-在 Claude Code 里可以随时切换模型：
+使用 `/model` 查看当前工具可选项，并与服务账户权限核对。不要由显示名称自行拼接模型 ID。先用同一小任务比较结果、耗时与消耗，再选择日常型号。
 
-```
-/model claude-sonnet-4        # 日常编程首选，速度和质量平衡好
-/model claude-opus-4          # 最强推理，复杂架构设计、大型重构用这个
-/model claude-sonnet-4-thinking  # 带思维链，调试复杂 bug 时很有用
-/model claude-haiku-4         # 快速响应，简单任务用这个省钱
-```
+模型与价格以 [MaxRouter 当前页面](https://www.maxrouter.ai/pricing?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 为准；以下为历史截图：
 
-我日常用 Sonnet 4，遇到复杂问题切 Opus 4。
-
-MaxRouter 上可以看到所有支持的模型和价格：
-
-![模型列表](./images/models.png)
+![模型列表（历史界面）](./images/models.png)
 
 ## 日常使用
 
@@ -198,7 +130,11 @@ MaxRouter 上可以看到所有支持的模型和价格：
 | `Ctrl+C` | 中断操作 |
 | `/exit` | 退出 |
 
+实际命令以本机 `/help` 为准；`/cost` 与服务账户可能采用不同统计口径。
+
 ### 实际场景
+
+以下任务可能修改文件、安装依赖或提交代码。先备份，在可审查分支执行，并逐项审阅差异与测试结果。
 
 **让它帮你写一个完整功能：**
 
@@ -269,57 +205,32 @@ MaxRouter 上可以看到所有支持的模型和价格：
 
 ### 配合其他工具
 
-同一个 MaxRouter Key 还能用在其他 AI 编程工具上：
+Cursor、Cline 和 Continue 各有配置方式，需分别核对工具版本、协议、模型和功能。聊天成功不能代替编辑、工具调用、图片与长上下文验收，不把旧 JSON 配置当作全部工具的通用现行配置。
 
-**Cursor：**
-- Settings → Models → Override OpenAI Base URL: `https://api.maxrouter.ai/v1`
-
-**Cline（VS Code）：**
-- API Provider → OpenAI Compatible → Base URL: `https://api.maxrouter.ai/v1`
-
-**Continue（VS Code / JetBrains）：**
-
-```json
-{
-  "models": [{
-    "provider": "openai",
-    "model": "claude-sonnet-4",
-    "apiKey": "sk-your-key",
-    "apiBase": "https://api.maxrouter.ai/v1"
-  }]
-}
-```
-
-![配置步骤参考](./images/step.png)
+![配置步骤参考（历史界面）](./images/step.png)
 
 ## 常见问题
 
-**Q: 报错 403？**
-配置了 `ANTHROPIC_BASE_URL` 指向 MaxRouter 就不会有这个问题，不需要代理。
+**Q：报错 403、401 或超时？**
+记录版本、认证类型、错误类别和时间，分别排查凭据、权限、地址和网络。改地址不保证消除这些错误，不公开 Key 或完整配置。
 
-**Q: 安装超时？**
-`npm install -g @anthropic-ai/claude-code`，npm 慢就先 `npm config set registry https://registry.npmmirror.com`。
+**Q：流式输出和官方一样吗？**
+按具体模型、协议与工具验证。收到部分文字不等于正常结束，还要检查结束信号和错误处理。
 
-**Q: ANTHROPIC_BASE_URL 要加 /v1 吗？**
-不要。设为 `https://api.maxrouter.ai`，Claude Code 自动拼接路径。
+**Q：数据安全如何判断？**
+使用前核对当前隐私政策、日志保留范围和上游处理路径。本文不承诺“完全不存储”或“全部请求直达官方”。
 
-**Q: 流式输出支持吗？**
-支持，体验跟官方一样。
+**Q：怎么核对用量？**
+先确认计费身份与统计窗口，再查看 [MaxRouter 控制台](https://www.maxrouter.ai/console/overview?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)。工具统计不能直接当作相同口径的账单。
 
-**Q: 数据安全？**
-MaxRouter 不存储对话内容和代码，请求直接转发到官方 API。
-
-**Q: 怎么看花了多少钱？**
-Claude Code 里输 `/cost`，或者登录 [MaxRouter 控制台](https://www.maxrouter.ai/console/overview?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 看详细用量。
-
-**Q: 只能用 Claude 吗？**
-不是。MaxRouter 支持 GPT-5、GPT-4o、Gemini 2.5 Pro、DeepSeek 等 80+ 模型，统一 OpenAI 兼容接口。Claude Code 之外的场景（Cursor、自己的项目等）可以随意切换模型。
+**Q：下一步做什么？**
+先打开 [MaxRouter 文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) 核对目标工具的接入说明；确认权限和可能费用后，在自己的测试项目完成一个“输入、预期输出、验收方式”明确的小任务。
 
 ## 相关链接
 
 - [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code)
 - [Anthropic 官网](https://www.anthropic.com/claude-code)
-- [MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) — 我用的 API 平台
+- [MaxRouter](https://www.maxrouter.ai?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide) — 本文维护方的 API 平台
 - [MaxRouter 文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)
 - [MaxRouter 模型与价格](https://www.maxrouter.ai/pricing?utm_source=github&utm_medium=article&utm_campaign=existing_articles&utm_content=claude_code_guide)
 
