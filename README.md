@@ -4,7 +4,12 @@
 
 > 维护说明：本文由 MaxRouter 运营方维护，不是独立第三方推荐。修订日期：2026-11-03。历史截图仅供界面参考，不代表当前价格、赠额或兼容性验收。
 
-**关键词：** Claude Code 教程 / Claude Code 国内使用 / Claude Code 安装 / Claude Code 配置 / Claude Code API 中转 / Anthropic API 国内 / AI 编程助手 / Claude Code 替代方案
+## 先完成第一次调用
+
+- 已有 API Key：[先查模型，再发一条消息并核对用量](./docs/first-call.md)。提供无依赖 Node.js 示例，默认只查模型，明确执行 `--send` 才生成一次。
+- 准备连接 Claude Code：[打开接入文档](https://www.maxrouter.ai/docs?utm_source=github&utm_medium=readme&utm_campaign=first_call_202611&utm_content=claude_code_guide)，按下面的配置清单核对。先在当前终端验证，不覆盖已有全局配置。
+
+新增首调教程与示例维护日期：2026-11-04。示例的验证范围见教程末尾；离线测试不代表真实模型或全部工具功能已验收。
 
 ---
 
