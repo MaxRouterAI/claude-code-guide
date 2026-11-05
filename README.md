@@ -4,11 +4,7 @@
 
 > 维护说明：本文由 MaxRouter 运营方维护，不是独立第三方推荐。修订日期：2026-11-03。历史截图仅供界面参考，不代表当前价格、赠额或兼容性验收。
 
-## 新文章：Pi + Opus 5.5 真实项目实测
-
-[AI 编程越聊越贵？用 Pi 把 Token 花在代码上](./docs/pi-opus55-context-practice/README.md)
-
-同一项目文档任务、同用 Opus 5.5，记录完整输入、输出、缓存及实际费用；附安装接入步骤、真实截图、独立验收与脱敏数据。本次 Pi 费用含修正，较 Claude Code 少 21.4%、较 OpenCode 少 23.4%；样本和配置限制见正文。
+相关教程：[Pi Coding Agent 独立教程：安装、Opus 5.5 接入与实测](https://github.com/MaxRouterAI/pi-coding-agent-guide)。
 
 ## 先完成第一次调用
 

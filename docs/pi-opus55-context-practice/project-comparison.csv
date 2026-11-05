@@ -1,5 +1,0 @@
-client,model,calls,input_tokens,output_tokens,cache_read_tokens,cache_write_tokens,actual_usd,quality,compatibility
-pi,anthropic-claude-opus-5.5,10,57524,5469,19404,2766,0.268512,passed_after_one_review_correction_new_session,native_custom_provider
-claude,anthropic-claude-opus-5.5,5,97766,3675,0,90858,0.341420,passed_independent_review,local_system_message_structure_adapter
-opencode,anthropic-claude-opus-5.5,9,126867,5007,70128,9218,0.350346,passed_independent_review,native_custom_provider
-codex,openai-gpt-6.1-sol,5,55008,2617,39786,15207,0.068200,passed_independent_review,native_custom_provider
